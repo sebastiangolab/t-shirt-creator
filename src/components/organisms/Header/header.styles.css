@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header__title {
+    font-size: 1.5rem;
+    line-height: 1em;
+    font-weight: var(--light-font);
+}
+
+.header__title .red {
+    font-weight: var(--bold-font);
+}
+
+.header__author {
+    line-height: 1em;
+    font-weight: var(--light-font);
+}

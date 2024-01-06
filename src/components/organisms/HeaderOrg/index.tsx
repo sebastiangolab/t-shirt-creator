@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import './header.styles.css';
 
-const Header = (): ReactElement => {
+const HeaderOrg = (): ReactElement => {
    return (
       <div className="header">
          <h1 className="header__title">
@@ -13,4 +13,4 @@ const Header = (): ReactElement => {
    );
 };
 
-export default Header;
+export default HeaderOrg;

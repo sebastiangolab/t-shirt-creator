@@ -5,10 +5,10 @@ interface MainContainerProps {
    children: ReactNode;
 }
 
-const MainContainer = ({
+const MainContainerOrg = ({
    children,
 }: MainContainerProps): ReactElement<MainContainerProps> => {
    return <div className="mainContainer">{children}</div>;
 };
 
-export default MainContainer;
+export default MainContainerOrg;

@@ -15,6 +15,7 @@ body {
    font-size: 16px;
    background-color: var(--background-color);
    color: var(--white-color);
+   font-weight: var(--regular-font);
 }
 
 input,
@@ -29,4 +30,8 @@ canvas,
 svg {
    display: block;
    max-width: 100%;
+}
+
+.red {
+    color: var(--red-color);
 }

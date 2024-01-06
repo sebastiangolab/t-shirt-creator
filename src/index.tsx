@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './styles/colors.css';
+import './styles/font-weights.css';
 import './styles/breakpoints.css';
 import './styles/global.css';
 

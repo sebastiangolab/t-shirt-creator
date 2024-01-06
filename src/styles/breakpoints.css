@@ -1,0 +1,6 @@
+:root {
+    --small-desktop-bp: 1339px;
+    --tablet-bp: 991px;
+    --mobile-bp: 767px;
+    --min-mobile-bp: 549px;
+}

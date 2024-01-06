@@ -1,5 +1,6 @@
-const App = () => {
-   return <h1>Hello Sebastian</h1>;
-};
+import { ReactElement } from 'react';
+import MainLayout from './components/layouts/MainLayout';
+
+const App = (): ReactElement => <MainLayout />;
 
 export default App;

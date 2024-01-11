@@ -1,0 +1,19 @@
+.select {
+   position: relative;
+   border-radius: 15px;
+}
+
+.select__items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+
+.select__items.open {
+    display: block;
+}

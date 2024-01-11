@@ -1,0 +1,13 @@
+.settings {
+   width: 430px;
+   height: 777px;
+   padding: 20px 30px 40px 30px;
+   border-top-right-radius: 30px;
+   border-bottom-right-radius: 30px;
+   background-color: var(--red-color);
+}
+
+.settings__title {
+   font-size: 1.563rem;
+   font-weight: var(--regular-font);
+}

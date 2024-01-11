@@ -6,4 +6,8 @@
     --preview-background-color: #18181A;
     --preview-stroke-color: #444444;
     --red-color: #B83529;
+
+    /* SELECT */
+    --select-hover-color: #eee;
+    --select-stroke-color: #ddd;
 }

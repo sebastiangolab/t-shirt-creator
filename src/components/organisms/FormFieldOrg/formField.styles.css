@@ -8,3 +8,13 @@
     font-weight: var(--regular-font);
     margin-bottom: 7px;
 }
+
+@media (max-width: 991px) {
+    .field:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .field__mobile--hide {
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+.text-area {
+   width: 100%;
+}
+
+.text-area__input {
+    width: 100%;
+    height: 125px;
+    padding: 12px;
+    border-radius: 15px;
+    resize: none;
+}
+
+.text-area__limit {
+    font-size: 0.75rem;
+    text-align: right;
+}

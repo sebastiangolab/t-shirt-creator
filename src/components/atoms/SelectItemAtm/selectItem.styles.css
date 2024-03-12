@@ -51,6 +51,7 @@
    top: 0;
    height: 100%;
    width: 40px;
+   border-right: 1px solid var(--select-stroke-color);
    border-top-left-radius: 15px;
    border-bottom-left-radius: 15px;
 }
@@ -64,13 +65,27 @@
 }
 
 .select__item--color.black {
-   background-color: #000;
+   background-color: #333;
 }
 
 .select__item--color.red {
-   background-color: red;
+   background-color: rgb(157, 43, 43);
 }
 
 .select__item--color.green {
-   background-color: green;
+   background-color: #13753E;
+}
+
+.select__item--color.yellow {
+   background-color: RGB(253, 235, 23);
+}
+
+.select__item--color.blue {
+   background-color: RGB(32, 65, 154);
+}
+
+@media (max-width: 991px) {
+   .select__item {
+      border-radius: 15px;
+   }
 }

@@ -1,6 +1,6 @@
 .select {
    position: relative;
-   border-radius: 15px;
+   border-radius: 10px;
 }
 
 .select__items {
@@ -12,8 +12,10 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     overflow: hidden;
+    border-bottom: 1px solid var(--select-stroke-color);
 }
 
 .select__items.open {
     display: block;
+    z-index: 99999;
 }

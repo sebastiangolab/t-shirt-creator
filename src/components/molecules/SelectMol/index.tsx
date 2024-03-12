@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { ReactElement, useEffect, useMemo, useRef, useState } from 'react';
 import SelectItemAtm from '../../atoms/SelectItemAtm';
 import './select.styles.css';
 
@@ -16,10 +16,7 @@ const SelectMol = ({
    hasColors,
 }: SelectProps): ReactElement | null => {
    const [isOpen, setIsOpen] = useState(false);
-
-   const valuesWithoutActive: string[] = values.filter(
-      (value: string) => value !== activeValue,
-   );
+   const selectRef = useRef<HTMLDivElement | null>(null);
 
    const handleSelectItemOnClick = (value?: string) => {
       if (value) {
@@ -29,12 +26,37 @@ const SelectMol = ({
       setIsOpen((prevState: boolean) => !prevState);
    };
 
+   const handleOutSideClick = (event: MouseEvent) => {
+      const target = event.target as Element;
+
+      if (!selectRef.current?.contains(target)) {
+         setIsOpen(false);
+      }
+   };
+
+   useEffect(() => {
+      if (isOpen) {
+         window.addEventListener('click', handleOutSideClick);
+      } else {
+         window.removeEventListener('click', handleOutSideClick);
+      }
+
+      return () => {
+         window.removeEventListener('click', handleOutSideClick);
+      };
+   }, [isOpen]);
+
+   const valuesWithoutActive: string[] = useMemo(
+      () => values.filter((value: string) => value !== activeValue),
+      [values],
+   );
+
    if (!activeValue) {
       return null;
    }
 
    return (
-      <div className="select">
+      <div className="select" ref={selectRef}>
          <SelectItemAtm
             value={activeValue}
             onClick={() => handleSelectItemOnClick()}

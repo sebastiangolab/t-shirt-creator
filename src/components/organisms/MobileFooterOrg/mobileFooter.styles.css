@@ -1,0 +1,25 @@
+.mobile-footer {
+   display: none;
+}
+
+@media (max-width: 991px) {
+   .mobile-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+      margin-top: 12px;
+   }
+
+   .mobile-footer.settings-visible,
+   .mobile-footer.color-select-visible {
+      grid-template-columns: 1fr;
+   }
+
+   .mobile-footer.settings-visible .mobile-footer__color-select {
+      display: none;
+   }
+
+   .mobile-footer.color-select-visible .mobile-footer__settings {
+      display: none;
+   }
+}

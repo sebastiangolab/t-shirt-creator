@@ -1,13 +1,83 @@
+.settings__wrapper {
+   position: relative;
+   width: 350px;
+   max-height: 100%;
+}
+
 .settings {
-   width: 430px;
-   height: 777px;
-   padding: 20px 30px 40px 30px;
-   border-top-right-radius: 30px;
-   border-bottom-right-radius: 30px;
+   position: absolute;
+   right: 0;
+   top: 50%;
+   width: calc(100% + 70px);
+   border-radius: 15px;
    background-color: var(--red-color);
+   transform: translateY(-50%);
+   height: calc(100% - 70px);
+   overflow: hidden;
+}
+
+.settings__content {
+   width: 100%;
+   height: 100%;
+   padding: 20px 37px 40px 30px;
+   overflow-y: scroll;
+}
+
+.settings__content::-webkit-scrollbar {
+   -webkit-appearance: none;
+   width: 7px;
+}
+
+.settings__content::-webkit-scrollbar-thumb {
+   border-radius: 8px;
+   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .settings__title {
    font-size: 1.563rem;
    font-weight: var(--regular-font);
+}
+
+.settings__mobile-color-list {
+   display: none;
+}
+
+@media (max-width: 991px) {
+   .settings__wrapper {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+   }
+
+   .settings {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
+   }
+
+   .settings__content {
+      padding: 25px 27px 25px 20px;
+   }
+
+   .settings__title {
+      display: none;
+   }
+
+   .mobile-settings-visible,
+   .color-setings-visible {
+      display: block;
+   }
+
+   .color-setings-visible .settings__form {
+      display: none;
+   }
+
+   .color-setings-visible .settings__mobile-color-list {
+      display: block;
+   }
 }

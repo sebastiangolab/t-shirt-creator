@@ -16,20 +16,24 @@ const PreviewOrg = (): ReactElement => {
    const dispatch = useDispatch();
    const splineObject: MutableRefObject<Application | undefined> = useRef();
 
+   const splinePropertiesObject = {
+      color: tShirt.color,
+      isFront: tShirt.side === T_SHIRT_SIDES.FRONT,
+      frontText: tShirt.frontText.text,
+      frontSize: getTextSizePx(tShirt.frontText.size),
+      backText: tShirt.backText.text,
+      backSize: getTextSizePx(tShirt.backText.size),
+   };
+
    const onLoad = (spline: Application) => {
       splineObject.current = spline;
+
+      splineObject.current.setVariables(splinePropertiesObject);
    };
 
    useEffect(() => {
       if (splineObject.current) {
-         splineObject.current.setVariables({
-            color: tShirt.color,
-            isFront: tShirt.side === T_SHIRT_SIDES.FRONT,
-            frontText: tShirt.frontText.text,
-            frontSize: getTextSizePx(tShirt.frontText.size),
-            backText: tShirt.backText.text,
-            backSize: getTextSizePx(tShirt.backText.size),
-         });
+         splineObject.current.setVariables(splinePropertiesObject);
       }
    }, [tShirt]);
 

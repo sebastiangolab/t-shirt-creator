@@ -50,10 +50,7 @@ const PreviewOrg = (): ReactElement => {
             />
          </div>
 
-         <Spline
-            scene="https://prod.spline.design/IEuqCDhk-nhN62a3/scene.splinecode"
-            onLoad={onLoad}
-         />
+         <Spline scene={'/assets/tshirt.spline'} onLoad={onLoad} />
       </div>
    );
 };

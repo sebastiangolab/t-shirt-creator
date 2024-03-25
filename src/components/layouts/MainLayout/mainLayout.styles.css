@@ -1,18 +1,17 @@
 .mainContainer {
    width: 100%;
-   height: 100vh;
+   height: 100dvh;
    max-width: calc(1290px + 50px);
    padding: 20px 25px;
    margin-left: auto;
    margin-right: auto;
-   overflow: hidden;
 }
 
 .mainContainer__creator {
    position: relative;
    display: flex;
    align-items: stretch;
-   height: calc(100vh - 80px);
+   height: calc(100dvh - 80px);
    overflow: hidden;
 }
 
@@ -23,6 +22,6 @@
    }
 
    .mainContainer__creator {
-      height: calc(100vh - 108px);
+      height: calc(100dvh - 108px);
    }
 }

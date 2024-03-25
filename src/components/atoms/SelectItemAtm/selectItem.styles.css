@@ -85,7 +85,7 @@
 }
 
 @media (max-width: 991px) {
-   .select__item {
+   .select__item.color {
       border-radius: 15px;
    }
 }

@@ -24,7 +24,7 @@
 
 @media (max-width: 991px) {
    .preview {
-      padding: 50px 0 0 0;
+      padding: 0;
    }
 
    .preview__side {

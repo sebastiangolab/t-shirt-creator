@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple steps.
    npm install npm@latest -g
    ```
 
--  node - https://nodejs.org/en/download/
+-  node (project use version 20.17.0) - https://nodejs.org/en/download/
 
 ### Installation
 
